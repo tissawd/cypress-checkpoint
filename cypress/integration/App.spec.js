@@ -13,5 +13,11 @@ describe('Home page', () => {
   
   it("Displays movie poster images on the home page", () => {
     cy.get('img').should('exist')
+    
+  })
+
+  it("Search bar should take user input", () => {
+    cy.get('input').type("search test")
+    cy.get('input').should('have.value', 'search test')
   })
 })
