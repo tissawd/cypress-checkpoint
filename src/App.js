@@ -6,10 +6,12 @@ import { useEffect, useState } from 'react';
 function App() {
   const [ movies, setMovies ] = useState([]);
 
-  useEffect(() =>{
+  useEffect(() => {
     fetch('http://localhost:3001/movies')
+    // .then(response => console.log(response))
     .then(response => response.json())
     .then(result => setMovies(result))
+    // .catch(err => console.log(err))
   })
 
   return (
