@@ -12,7 +12,7 @@ function App() {
     .then(response => response.json())
     .then(result => setMovies(result))
     // .catch(err => console.log(err))
-  })
+  }, [])
 
   return (
     <div className="App">
